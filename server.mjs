@@ -1,4 +1,3 @@
-console.log("This is saasasasim");
 import express from 'express'
 import moment from 'moment';
 const app = express()
