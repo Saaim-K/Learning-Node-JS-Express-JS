@@ -1,11 +1,12 @@
 console.log("This is saasasasim");
 import express from 'express'
+import moment from 'moment';
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000
 
 app.get('/', (req, res) => {
     console.log('Request IP :', req.ip);
-    res.send('Hello Saaim!' + new Date().toString())
+    res.send(`<h1> Hello Saaim. It is ${moment(new Date().getTime()).format('h:mm:ss')}</h1>`)
 })
 
 app.listen(port, () => {
